@@ -16,7 +16,7 @@ export type SurveillanceResponse = {
     alert_triggered: boolean
 }
 
-const AI_ENGINE_URL = process.env.AI_ENGINE_URL || "http://127.0.0.1:8000"
+const AI_ENGINE_URL = process.env.NEXT_PUBLIC_AI_ENGINE_URL || "/api/ai"
 
 export async function fetchRiskScore(lat: number, lng: number): Promise<RiskResponse | null> {
     try {
