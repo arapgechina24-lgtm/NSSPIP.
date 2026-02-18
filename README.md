@@ -1,5 +1,7 @@
 # AI-Powered National Security and Smart Policing Intelligence Platform (NSSPIP)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farapgechina24-lgtm%2FNSSPIP&env=DATABASE_URL)
+
 ## Problem Statement
 
 Kenya’s security landscape has become increasingly complex due to the convergence of traditional and emerging threats, including terrorism, organised crime, cyber-enabled offences, violent extremism, and urban insecurity. These threats are compounded by rapid urbanisation, population growth, and technological advancements that criminal groups exploit for coordination, recruitment, and disinformation.
