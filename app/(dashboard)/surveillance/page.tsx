@@ -1,15 +1,33 @@
+"use client"
+
 import { CameraFeed } from "@/components/surveillance/camera-feed"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Map, LayoutGrid } from "lucide-react"
+import { Map, LayoutGrid, Radio } from "lucide-react"
+import { Label } from "@/components/ui/label"
+// import { Switch } from "@/components/ui/switch"
+import { useState } from "react"
 
 export default function SurveillancePage() {
+    const [simulateRTSP, setSimulateRTSP] = useState(false)
+
     return (
         <div className="container mx-auto py-6 space-y-6">
             <div className="flex justify-between items-center">
                 <div>
                     <h1 className="text-3xl font-bold">Surveillance Ops</h1>
                     <p className="text-muted-foreground">Live monitoring of city sectors and active units.</p>
+                </div>
+                <div className="flex items-center space-x-2 bg-muted p-2 rounded-lg">
+                    <Radio className={`h-4 w-4 ${simulateRTSP ? "text-destructive animate-pulse" : "text-muted-foreground"}`} />
+                    <Label htmlFor="rtsp-mode" className="text-sm font-medium">Simulate RTSP Stream</Label>
+                    <input
+                        type="checkbox"
+                        id="rtsp-mode"
+                        className="h-4 w-4 accent-primary"
+                        checked={simulateRTSP}
+                        onChange={(e) => setSimulateRTSP(e.target.checked)}
+                    />
                 </div>
             </div>
 
@@ -35,6 +53,7 @@ export default function SurveillancePage() {
                             location="123 Main St"
                             status="LIVE"
                             imageUrl="https://images.unsplash.com/photo-1574359736952-475a896d863f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            videoUrl={simulateRTSP ? "https://media.w3.org/2010/05/sintel/trailer_hd.mp4" : undefined}
                         />
                         <CameraFeed
                             id="CAM-02"
@@ -42,6 +61,7 @@ export default function SurveillancePage() {
                             location="Central Square"
                             status="LIVE"
                             imageUrl="https://images.unsplash.com/photo-1588698944583-04bc74d0e82c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            videoUrl={simulateRTSP ? "https://www.w3schools.com/html/mov_bbb.mp4" : undefined}
                         />
                         <CameraFeed
                             id="CAM-03"
@@ -62,6 +82,15 @@ export default function SurveillancePage() {
                             location="5th & Broadway"
                             status="LIVE"
                             imageUrl="https://images.unsplash.com/photo-1494587429621-3ce1a51203eb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            videoUrl={simulateRTSP ? "https://media.w3.org/2010/05/sintel/trailer_hd.mp4" : undefined}
+                        />
+                        <CameraFeed
+                            id="CAM-06"
+                            name="Highway Exit 12"
+                            location="Mombasa Rd"
+                            status="LIVE"
+                            imageUrl="https://images.unsplash.com/photo-1565626424177-84d8525e9854?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+                            videoUrl={simulateRTSP ? "https://www.w3schools.com/html/mov_bbb.mp4" : undefined}
                         />
                     </div>
                 </TabsContent>

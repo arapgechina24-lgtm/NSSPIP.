@@ -6,17 +6,18 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { createIncident } from "@/lib/actions/incidents"
+// import { createIncident } from "@/lib/actions/incidents"
 import { MapPin, Loader2, CheckCircle } from "lucide-react"
 import { toast } from "sonner"
 
 export default function ReportPage() {
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
+    const [reportId, setReportId] = useState("")
     const [location, setLocation] = useState<{ lat: number, lng: number } | null>(null)
     const [locating, setLocating] = useState(false)
 
-    async function handleSubmit(formData: FormData) {
+    async function handleSubmit() {
         setLoading(true)
         // In a real app, we'd handle the server action response properly
         // For MVP, utilizing the existing action but we might need to adapt it for public access or use a separate one
@@ -26,6 +27,7 @@ export default function ReportPage() {
         // Mock submission delay
         await new Promise(resolve => setTimeout(resolve, 1500))
 
+        setReportId((Math.random() * 10000).toFixed(0))
         setSuccess(true)
         setLoading(false)
     }
@@ -53,7 +55,7 @@ export default function ReportPage() {
                 <CardContent className="pt-6 text-center space-y-4">
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
                     <h2 className="text-2xl font-bold text-green-700 dark:text-green-400">Report Submitted</h2>
-                    <p className="text-muted-foreground">Thank you for helping keep our community safe. Your report ID is #{(Math.random() * 10000).toFixed(0)}.</p>
+                    <p className="text-muted-foreground">Thank you for helping keep our community safe. Your report ID is #{reportId}.</p>
                     <Button onClick={() => setSuccess(false)} variant="outline">Submit Another</Button>
                 </CardContent>
             </Card>

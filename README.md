@@ -100,7 +100,7 @@ Through AI-powered intelligence, the project will help Kenya transition from rea
 
 ## Thematic Area
 
-**Governance, Public Policy and Political Stability**
+Governance, Public Policy and Political Stability
 
 ## Technology & Methodology
 
