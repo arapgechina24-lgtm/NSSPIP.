@@ -1,6 +1,6 @@
 # AI-Powered National Security and Smart Policing Intelligence Platform (NSSPIP)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farapgechina24-lgtm%2FNSSPIP&env=DATABASE_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farapgechina24-lgtm%2FNSSPIP&env=DATABASE_URL&project-name=nsspip)
 
 ## Problem Statement
 
