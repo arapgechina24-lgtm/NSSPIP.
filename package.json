@@ -10,7 +10,8 @@
     "test": "vitest",
     "format": "prettier --write .",
     "seed": "tsx prisma/seed.ts",
-    "simulate:riot": "tsx scripts/simulate-riot.ts"
+    "simulate:riot": "tsx scripts/simulate-riot.ts",
+    "python:dev": "python3 -m uvicorn api.index:app --host 127.0.0.1 --port 5328 --reload"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
