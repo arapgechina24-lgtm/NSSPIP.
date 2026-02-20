@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'AI-Powered National Security Platform',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${outfit.className} antialiased selection:bg-primary/20 selection:text-primary`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

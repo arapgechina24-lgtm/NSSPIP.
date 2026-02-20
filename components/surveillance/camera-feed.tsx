@@ -1,9 +1,16 @@
 "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Signal, Video, VideoOff } from "lucide-react"
+import Image from "next/image"
 import { useState, useEffect } from "react"
+
+interface Detection {
+    label: string
+    confidence: number
+    bbox: number[]
+}
 
 interface CameraFeedProps {
     id: string
@@ -15,7 +22,7 @@ interface CameraFeedProps {
 }
 
 export function CameraFeed({ id, name, location, status, imageUrl, videoUrl }: CameraFeedProps) {
-    const [detections, setDetections] = useState<any[]>([])
+    const [detections, setDetections] = useState<Detection[]>([])
     const [analyzing, setAnalyzing] = useState(false)
 
     useEffect(() => {
@@ -59,7 +66,7 @@ export function CameraFeed({ id, name, location, status, imageUrl, videoUrl }: C
                         className="object-cover w-full h-full"
                     />
                 ) : imageUrl ? (
-                    <img src={imageUrl} alt={name} className="object-cover w-full h-full opacity-80" />
+                    <Image src={imageUrl} alt={name} fill className="object-cover opacity-80" unoptimized />
                 ) : (
                     <div className="text-muted-foreground flex flex-col items-center gap-2">
                         <Video className="h-10 w-10" />

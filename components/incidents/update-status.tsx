@@ -17,7 +17,8 @@ export function UpdateStatus({ id, currentStatus }: { id: string, currentStatus:
     const handleValueChange = (value: string) => {
         startTransition(async () => {
             try {
-                await updateIncidentStatus(id, value as any)
+                const validStatus = value as "OPEN" | "IN_PROGRESS" | "RESOLVED" | "CLOSED"
+                await updateIncidentStatus(id, validStatus)
             } catch (error) {
                 console.error(error)
             }

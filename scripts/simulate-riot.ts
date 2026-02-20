@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker'
 const prisma = new PrismaClient()
 
 // Mock Encryption Function
-function mockEncrypt(data: any): string {
+function mockEncrypt(data: unknown): string {
     return `ENCRYPTED_Blob_${Buffer.from(JSON.stringify(data)).toString('base64')}`
 }
 

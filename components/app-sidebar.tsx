@@ -1,18 +1,14 @@
 "use client"
 
 import * as React from "react"
-import {
-    BookOpen,
-    Bot,
+BookOpen,
     Command,
     Frame,
     LifeBuoy,
     Map,
     PieChart,
     Send,
-    Settings2,
     SquareTerminal,
-    User,
     ShieldAlert,
     Radio,
     FileText
