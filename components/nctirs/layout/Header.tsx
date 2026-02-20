@@ -78,17 +78,17 @@ export function Header({ currentView, onViewChange }: HeaderProps) {
             <div>
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-green-400 tracking-tighter glow-text">
-                  NCTIRS
+                  NSSPIP
                 </h1>
                 <div className="px-2 py-0.5 bg-green-950 border border-green-700/50 rounded-none text-[10px] font-mono text-green-300">
-                  NIS-KENYA
+                  SMART POLICING
                 </div>
                 <div className="px-2 py-0.5 bg-amber-950 border border-amber-700/50 rounded-none text-[10px] font-mono text-amber-300">
                   DPA 2019
                 </div>
               </div>
               <p className="text-[10px] text-green-800 tracking-[0.2em] mt-1 font-bold uppercase">
-                NATIONAL CYBER THREAT INTELLIGENCE & RESPONSE SYSTEM • AI-POWERED UNIFIED PLATFORM
+                AI-POWERED NATIONAL SECURITY AND SMART POLICING INTELLIGENCE PLATFORM
               </p>
             </div>
           </div>

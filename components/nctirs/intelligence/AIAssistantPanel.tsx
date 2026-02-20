@@ -6,7 +6,7 @@ import { Bot, Send } from 'lucide-react';
 
 const AIAssistantPanel: React.FC = () => {
     const [messages, setMessages] = useState<{ role: 'user' | 'ai'; content: string }[]>([
-        { role: 'ai', content: 'NCTIRS AI Core Online. Ready to assist with threat mitigation strategies.' }
+        { role: 'ai', content: 'NSSPIP AI Core Online. Ready to assist with threat mitigation strategies.' }
     ]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);

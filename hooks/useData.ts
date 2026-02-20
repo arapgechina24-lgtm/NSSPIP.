@@ -1,4 +1,4 @@
-// Data fetching hooks for NCTIRS Dashboard
+// Data fetching hooks for NSSPIP Dashboard
 // Wraps API calls with React state management
 
 import { useState, useEffect, useCallback } from 'react'

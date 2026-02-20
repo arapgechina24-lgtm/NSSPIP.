@@ -1,5 +1,5 @@
 /**
- * NCTIRS Anomaly Detection Engine — Powered by TensorFlow.js
+ * NSSPIP Anomaly Detection Engine — Powered by TensorFlow.js
  *
  * Implements a statistical anomaly detection model that runs entirely
  * in the browser. Uses an autoencoder-style approach:

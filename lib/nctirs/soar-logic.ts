@@ -31,7 +31,7 @@ export function createNC4Report(
 ): NC4IncidentReport {
     return {
         reporting_entity: {
-            name: "NCTIRS-FUSION-CENTER",
+            name: "NSSPIP-FUSION-CENTER",
             agency_type: "GOVERNMENT",
             county: county
         },

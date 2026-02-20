@@ -292,7 +292,7 @@ export default function Home() {
         return (
             <div className="min-h-screen bg-black flex items-center justify-center font-mono text-green-500">
                 <div className="text-center">
-                    <div className="animate-pulse text-xl mb-2">NCTIRS</div>
+                    <div className="animate-pulse text-xl mb-2">NSSPIP</div>
                     <div className="text-sm text-green-800">INITIALIZING_SECURE_CONNECTION...</div>
                     <div className="mt-4 flex items-center justify-center gap-2">
                         <div className="h-2 w-2 bg-green-500 rounded-full animate-ping" />
